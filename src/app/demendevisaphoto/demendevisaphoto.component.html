@@ -1,0 +1,28 @@
+<div class="row">
+
+  <div class="col-sm-3"><app-menu></app-menu>
+  </div>
+<div class="col-sm-6"><div class="page-content-wrapper">
+    <div class="page-content">
+<div [hidden]="submitted">
+  <h1>Client Form</h1>
+  <form (ngSubmit)="onSubmit1(heroForm)" #heroForm="ngForm">
+    
+    <div class="form-group">
+      <label class="control-label ">copie passport</label>
+      <div class="">
+        <input ngModel id="file" (change)="getFiles($event)" class="form-control" type="file" name="image">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label ">photo</label>
+      <div class="">
+        <input ngModel id="file1" (change)="getFiles1($event)" class="form-control " type="file" name="image1">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+    
+  </form>
+</div>
+</div>
+</div></div></div>

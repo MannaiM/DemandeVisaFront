@@ -1,0 +1,39 @@
+<router-outlet></router-outlet>
+<div class="row">
+
+    <div class="col-sm-3"><app-menu></app-menu>
+    </div>
+  <div class="col-sm-9">
+    <div class="page-content-wrapper">
+      <div class="page-content">
+<p>
+  repondrevisa works!
+</p>
+
+<table  id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead><tr><th>requestCountry:</th><th>nationalite:</th>
+      <th>travelDate:</th> 
+      <th>dateFin:</th>  
+      <th>dateDebut:</th>
+      <th>prix:</th>
+      <th>commentaire:</th>
+    </tr>
+    </thead>
+  <tbody>
+    <tr  *ngFor="let item of visas">   
+          <td>{{item}}
+            {{item.idDemandeVisa}}</td>
+            <td>{{item.requestCountry}}</td>
+            <td>{{item.nationalite}}</td>
+            <td>{{item.travelDate}}</td>
+            <td>{{item.dateFin}}</td>
+           <td>{{item.dateDebut}}</td>
+            <td>{{item.prix}}</td>
+            <td>{{item.commentaire}}</td>
+            <td>{{item.typeVisa.idTypeVisa}}</td>
+            <td> <a [routerLink]="['/voirDetails', item.idDemandeVisa]"> voir details</a></td>
+    </tr>
+          </tbody>
+          </table>
+          </div>
+          </div></div>

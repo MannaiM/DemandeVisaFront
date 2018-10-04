@@ -1,0 +1,32 @@
+<div class="login">
+    <div>
+      <a class="hiddenanchor" id="signup"></a>
+      <a class="hiddenanchor" id="signin"></a>
+
+      <div class="login_wrapper">
+        <div class="animate form login_form">
+          <section class="login_content">
+            
+            <form  (ngSubmit)="onLogin(LoginForm.value)" #LoginForm="ngForm">
+              <h1>Login Form</h1>
+              <div>
+                <input ngModel="" type="text" name="nom" class="form-control" placeholder="Username" required="" />
+              </div>
+              <div>
+                <input ngModel="" type="password" name="password" class="form-control" placeholder="Password" required="" />
+              </div>
+              <div>
+                {{erreur}}<br>
+                <button type="submit"  cclass="btn btn-default submit ">Log in</button>
+
+                
+                <br />
+              </div>
+            </form>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+

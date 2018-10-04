@@ -1,0 +1,47 @@
+<router-outlet></router-outlet>
+<div class="row">
+
+    <div class="col-sm-3"><app-menu></app-menu>
+    </div>
+  <div class="col-sm-9">
+    <div class="page-content-wrapper">
+      <div class="page-content">
+<p>
+  mydetails works!
+</p>
+
+<div *ngFor="let item of details" >
+
+    <div class="row">
+        <div class="col-md-3">
+            
+                <div> <img src="../../assets/images/{{item.photo}}" alt="" width="220px"  height="180px"  ></div>
+                </div>
+                <div class="col-md-3">
+                <div> <img src="../../assets/images/{{item.copiePasseport}}" alt="" width="220px"  height="180px"></div>
+    </div>
+        
+        <div class="col-md-6">
+           <h2>Mes données</h2>
+           <table  class="table table-striped table-bordered">
+             <tr>
+   <td> <label>{{item.demandeVisa.idDemandeVisa}}</label></td>
+  <td>Request country:<br>
+   <label>{{item.demandeVisa.requestCountry}}</label></td>
+  <td>Nationalité:<br>
+     <label>{{item.demandeVisa.nationalite}}</label></td></tr>
+    <tr>
+    <td> travel date:<br> <label>{{item.demandeVisa.travelDate}}</label></td>
+    <td>dateFin:<br> <label>{{item.demandeVisa.dateFin}}</label></td>
+    <td>dateDebut:<br><label>{{item.demandeVisa.dateDebut}}</label></td></tr>
+    <tr><td>prix:<br> <label>{{item.demandeVisa.prix}}</label></td>
+    <td><label>{{item.demandeVisa.commentaire}}</label></td>
+    <td> <label>{{item.demandeVisa.typeVisa.libelle}}</label></td></tr></table>
+     <label>Mon Statut</label>
+    <label style="background-color:DodgerBlue;"> {{item.statut}}</label>
+    </div>
+    </div>
+</div>
+</div>
+</div></div>
+</div>

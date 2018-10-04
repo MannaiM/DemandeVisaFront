@@ -1,0 +1,36 @@
+<html ng-app="lim">
+  <head>
+  <title> AngularJS Limber</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
+  <script type="text/javascript">
+   var app = angular.module("lim",[]);
+   app.controller("myCtrl", function($scope,$http){
+
+$http.get("https://www.limber.io/stage/customers.json")
+.then(function(response){
+$scope.customers = response.data;
+});
+});
+</script>  </head>
+  <body>
+  <table>
+  
+  <thead>
+  <th> id</th>
+<th>name</th>  
+  </thead>
+  <tbody>
+  <tr ng-repeat="customer in customers">
+  <td> {{customer.id}}</td>
+  <td> {{customer.index}}</td>
+  <td> {{customer.guid}}</td>
+  <td> <img ng-src="{{customer.picture}}"></td>
+  
+  </tr>
+  </tbody>
+
+  </table>
+  </body>
+  </html>
+
+
